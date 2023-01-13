@@ -17,8 +17,12 @@ const AddUser = (props) => {
       if(+enteredAge<1){
         return;
       }
-
-      props.onAddUser(enteredUserName, enteredAge);
+      const userList = {
+        id : Math.random().toString(),
+        name: enteredUserName,
+        age: enteredAge 
+      }
+      props.onAddUser(userList);
       setEnteredUserName('');
       setEnteredAge('');
     };
@@ -30,6 +34,7 @@ const AddUser = (props) => {
       setEnteredAge(event.target.value)
     }
   return (
+    <ErrorModal title="An error occured" message="Something went wrong!"/>
     <Card className = {classes.input}>
     <form onSubmit={addUserHandler}>
         <label htmlFor='username'>
