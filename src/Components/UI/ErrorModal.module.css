@@ -1,0 +1,15 @@
+.modal{
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 40rem;
+}
+.actions{
+    padding: 0 0 1rem 1rem;
+}
+.modal header{
+    padding: 1rem 0 0 1rem;
+}
+.content {
+    padding-left: 1rem;
+    align-items: flex-end;
+}
