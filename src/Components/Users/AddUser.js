@@ -33,9 +33,9 @@ const AddUser = (props) => {
         name: enteredUserName,
         age: enteredAge 
       }
-      props.onAddUser(userList);
-      setEnteredUserName('');
-      setEnteredAge('');
+        props.onAddUser(userList);
+        setEnteredUserName('');
+        setEnteredAge('');
     };
 
     const userChangeHandler = (event) =>{
@@ -51,9 +51,9 @@ const AddUser = (props) => {
     <>
     {error && (
     <ErrorModal 
-    title={error.title} 
-    message={error.message} 
-    onConfirm={errorHandler}
+      title={error.title} 
+      message={error.message} 
+      onConfirm={errorHandler}
     />
     )}
     <Card className = {classes.input}>
@@ -74,9 +74,9 @@ const AddUser = (props) => {
           </label>
 
         <input id="age" 
-        type="number" 
-        value={enteredAge} 
-        onChange={ageChangeHandler}>
+          type="number" 
+          value={enteredAge} 
+          onChange={ageChangeHandler}>
 
         </input>
         <Button type='submit'>
